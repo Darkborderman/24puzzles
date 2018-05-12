@@ -1,0 +1,114 @@
+let Level={};
+
+Level.level1={
+    player:{
+        type:'rectangle',
+        position:{
+            x:100,
+            y:100,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    rectangle:[
+        {
+            position:{
+                x:200,
+                y:250,
+            },
+            size:{
+                width:120,
+                height:20,
+            },
+            option:{
+                render:Config.rectangle.dynamic.render,
+            },
+        },
+    ],
+    circle:[
+
+    ],
+
+    polygen:[
+
+    ],
+    trapezoid:[
+
+    ],
+    endPoint:{
+        type:'rectangle',
+        position:{
+            x:720,
+            y:550,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+};
+
+Level.level2={
+    player:{
+        type:'rectangle',
+        position:{
+            x:150,
+            y:50,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    rectangle:[
+        {
+            position:{
+                x:350,
+                y:100,
+            },
+            size:{
+                width:700,
+                height:20,
+            },
+            option:{
+                isStatic:true,
+                render:Config.rectangle.static.render,
+            },
+        },
+        {
+            position:{
+                x:100,
+                y:50,
+            },
+            size:{
+                width:40,
+                height:40,
+            },
+            option:{
+                render:Config.rectangle.dynamic.render,
+            },
+        },
+    ],
+    circle:[
+
+    ],
+
+    polygen:[
+
+    ],
+    trapezoid:[
+    ],
+    endPoint:{
+        type:'rectangle',
+        position:{
+            x:300,
+            y:150,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+};
