@@ -1,0 +1,23 @@
+{
+  "name": "24puzzles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "matter-js": "^0.14.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Darkborderman/24puzzles.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Darkborderman/24puzzles/issues"
+  },
+  "homepage": "https://github.com/Darkborderman/24puzzles#readme"
+}
