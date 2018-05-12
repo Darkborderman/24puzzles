@@ -4,7 +4,7 @@ Level.level1={
     player:{
         type:'rectangle',
         position:{
-            x:100,
+            x:200,
             y:100,
         },
         size:{
@@ -15,7 +15,7 @@ Level.level1={
     rectangle:[
         {
             position:{
-                x:200,
+                x:100,
                 y:250,
             },
             size:{
@@ -23,7 +23,7 @@ Level.level1={
                 height:20,
             },
             option:{
-                render:Config.rectangle.dynamic.render,
+                render:Config.body.dynamic.render,
             },
         },
     ],
@@ -31,7 +31,7 @@ Level.level1={
 
     ],
 
-    polygen:[
+    polygon:[
 
     ],
     trapezoid:[
@@ -74,7 +74,7 @@ Level.level2={
             },
             option:{
                 isStatic:true,
-                render:Config.rectangle.static.render,
+                render:Config.body.static.render,
             },
         },
         {
@@ -87,18 +87,51 @@ Level.level2={
                 height:40,
             },
             option:{
-                render:Config.rectangle.dynamic.render,
+                render:Config.body.dynamic.render,
             },
         },
     ],
     circle:[
-
+        {
+            position:{
+                x:123,
+                y:456,
+            },
+            radius:20,
+            option:{
+                render:Config.body.dynamic.render,
+            },
+        },
     ],
 
-    polygen:[
-
+    polygon:[
+        {
+            position:{
+                x:123,
+                y:456,
+            },
+            sides:5,
+            radius:20,
+            option:{
+                render:Config.body.dynamic.render,
+            },
+        },
     ],
     trapezoid:[
+        {
+            position:{
+                x:300,
+                y:300,
+            },
+            size:{
+                width:23,
+                height:23,
+            },
+            slope:1,
+            option:{
+                render:Config.body.dynamic.render,
+            },
+        },
     ],
     endPoint:{
         type:'rectangle',

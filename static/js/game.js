@@ -20,84 +20,20 @@ engine.world.gravity=Config.engine.gravity;
 
 //create world render
 let render=null;
+let mouseConstraint=null;
+let player=null,endPoint=null;
 
 // run the engine
 Engine.run(engine);
 
-function Start() {
+function gameStart() {
+    //Detect the world has been generated or not
     if(render!=null) return;
 
-    //start rendering
-    render = Render.create({
-        element: Config.render.element,
-        engine: engine,
-        options: Config.render.option,
-    });
-    Render.run(render);
-
-    //Add mouse controller
-    let mouse = Mouse.create(render.canvas);
-    let mouseConstraint = MouseConstraint.create(engine, {
-        mouse: mouse,
-        constraint: Config.mouse.setting,
-    });
-
-    World.add(world, mouseConstraint);
-
-    //Add frame to world
-    let frame={
-        up:Bodies.rectangle(400, 0, 810, 60, Config.frame.setting),
-        down:Bodies.rectangle(400, 610, 810, 60, Config.frame.setting),
-        left:Bodies.rectangle(0,300,60,610, Config.frame.setting),
-        right:Bodies.rectangle(800, 300, 60, 610, Config.frame.setting),
-    }
-    for(frameData in frame) World.add(world,frame[frameData]);
+    worldRender();
 
     let currentLevel=Level[Config.level];
-    let rectData=currentLevel.rectangle;
-    let player,endPoint;
-    if(currentLevel.player.type==='rectangle'){
-        player=Bodies.rectangle(
-            currentLevel.player.position.x,
-            currentLevel.player.position.y,
-            currentLevel.player.size.width,
-            currentLevel.player.size.height,
-            Config.player.setting);
-    }
-    World.add(world,player);
-
-    //create world's rectangle bodies
-    for(i in rectData)
-    {
-        let rectChild= Bodies.rectangle(
-            rectData[i].position.x,
-            rectData[i].position.y,
-            rectData[i].size.width,
-            rectData[i].size.height,
-            rectData[i].option
-        )
-        World.add(world,rectChild);
-    }
-    /*
-    //create x-edge body
-    let x=Bodies.polygon(123,456,5,10);
-    World.add(world,x);
-    //create a triangle
-    let y=Bodies.trapezoid(123,456,50,20,2);
-    World.add(world,y);
-    let c=Bodies.circle(123,456,20);
-    World.add(world,c);
-    */
-
-    if(currentLevel.endPoint.type==='rectangle'){
-        endPoint=Bodies.rectangle(
-            currentLevel.endPoint.position.x,
-            currentLevel.endPoint.position.y,
-            currentLevel.endPoint.size.width,
-            currentLevel.endPoint.size.height,
-            Config.endPoint.setting);
-    }
-    World.add(world,endPoint);
+    levelGenerate(currentLevel);
 
     //detect game end or not
     Events.on(engine, 'collisionStart', function(event) {
@@ -128,7 +64,7 @@ function Start() {
     });
 }
 
-function Stop(){
+function gameReset(){
     if(render==null) return;
     Matter.Render.stop(render);
     render.canvas.remove();
@@ -139,4 +75,21 @@ function Stop(){
 
     Matter.World.clear(engine.world);
     Matter.Engine.clear(engine);
+    gameStart();
 }
+
+//Use event listener to replace inline HTML
+document.addEventListener('DOMContentLoaded',function(){
+    document.getElementById('start').addEventListener('click',function(){
+        gameStart();
+    });
+    document.getElementById('reset').addEventListener('click',function(){
+        gameReset();
+    });
+    Config.level = document.getElementById("selection").value;
+    gameStart();
+});
+document.getElementById('selection').addEventListener('change',function(){
+    Config.level = document.getElementById("selection").value;
+    gameReset();
+});

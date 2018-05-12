@@ -62,7 +62,7 @@ let Config={
             label:'endPoint',
         }
     },
-    rectangle:{
+    body:{
         dynamic:{
             render: {
                 strokeStyle: 'SaddleBrown',
@@ -79,17 +79,3 @@ let Config={
         },
     },
 };
-
-//Use event listener to replace inline HTML
-document.addEventListener('DOMContentLoaded',function(){
-    document.getElementById('start').addEventListener('click',function(){
-        Start();
-    });
-    document.getElementById('stop').addEventListener('click',function(){
-        Stop();
-    })
-    Config.level = document.getElementById("selection").value;
-});
-document.getElementById('selection').addEventListener('change',function(){
-    Config.level = document.getElementById("selection").value;
-});
