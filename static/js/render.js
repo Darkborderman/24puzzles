@@ -18,14 +18,22 @@ function worldRender(){
 
 //Generage world level
 function levelGenerate(currentLevel){
+
     //create world frame
+
+    let frameData=currentLevel.frame;
+
     let frame={
         up:Bodies.rectangle(400, 0, 810, 60, Config.frame.setting),
         down:Bodies.rectangle(400, 610, 810, 60, Config.frame.setting),
         left:Bodies.rectangle(0,300,60,610, Config.frame.setting),
         right:Bodies.rectangle(800, 300, 60, 610, Config.frame.setting),
     }
-    for(frameData in frame) World.add(world,frame[frameData]);
+    for(frameDirection in frameData)
+    {
+        if(frameData[frameDirection]==true)
+            World.add(world,frame[frameDirection]);
+    }
 
     //Create player and endpoint
     if(currentLevel.player.type==='rectangle'){

@@ -27,16 +27,9 @@ Level.level1={
             },
         },
     ],
-    circle:[
-
-    ],
-
-    polygon:[
-
-    ],
-    trapezoid:[
-
-    ],
+    circle:[],
+    polygon:[],
+    trapezoid:[],
     endPoint:{
         type:'rectangle',
         position:{
@@ -47,6 +40,12 @@ Level.level1={
             width:40,
             height:40,
         },
+    },
+    frame:{
+        up:true,
+        down:true,
+        left:true,
+        right:true,
     },
 };
 
@@ -67,6 +66,20 @@ Level.level2={
             position:{
                 x:350,
                 y:100,
+            },
+            size:{
+                width:700,
+                height:20,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:500,
+                y:200,
             },
             size:{
                 width:700,
@@ -120,28 +133,237 @@ Level.level2={
     trapezoid:[
         {
             position:{
-                x:300,
-                y:300,
+                x:100,
+                y:510,
             },
             size:{
-                width:23,
-                height:23,
+                width:200,
+                height:200,
             },
-            slope:1,
+            slope:2,
             option:{
-                render:Config.body.dynamic.render,
+                isStatic:true,
+                render:Config.body.static.render,
             },
         },
     ],
     endPoint:{
         type:'rectangle',
         position:{
-            x:300,
-            y:150,
+            x:720,
+            y:250,
         },
         size:{
             width:40,
             height:40,
         },
     },
+    frame:{
+        up:true,
+        down:true,
+        left:true,
+        right:true,
+    },
 };
+
+Level.level3={
+    player:{
+        type:'rectangle',
+        position:{
+            x:500,
+            y:100,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    rectangle:[
+        {
+            position:{
+                x:500,
+                y:250,
+            },
+            size:{
+                width:500,
+                height:10,
+            },
+            option:{
+                render:Config.body.dynamic.render,
+            },
+        },
+        {
+            position:{
+                x:700,
+                y:550,
+            },
+            size:{
+                width:10,
+                height:30,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+    ],
+    circle:[
+        {
+            position:{
+                x:123,
+                y:456,
+            },
+            radius:50,
+            option:{
+                density:0.1,
+                render:Config.body.dynamic.render,
+            },
+        },
+    ],
+    polygon:[],
+    trapezoid:[
+        {
+            position:{
+                x:400,
+                y:540,
+            },
+            size:{
+                width:300,
+                height:100,
+            },
+            slope:1,
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+    ],
+    endPoint:{
+        type:'rectangle',
+        position:{
+            x:100,
+            y:100,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    frame:{
+        up:true,
+        down:true,
+        left:true,
+        right:true,
+    },
+};
+
+Level.level4={
+    player:{
+        type:'rectangle',
+        position:{
+            x:100,
+            y:450,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    rectangle:[
+        {
+            position:{
+                x:100,
+                y:500,
+            },
+            size:{
+                width:120,
+                height:10,
+            },
+            option:{
+                frictionAir: 0.5,
+                density:10,
+                render:Config.body.dynamic.render,
+            },
+        },
+        {
+            position:{
+                x:100,
+                y:550,
+            },
+            size:{
+                width:160,
+                height:10,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:360,
+                y:400,
+            },
+            size:{
+                width:650,
+                height:10,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:420,
+                y:200,
+            },
+            size:{
+                width:650,
+                height:10,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:20,
+                y:370,
+            },
+            size:{
+                width:10,
+                height:50,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+    ],
+    circle:[],
+    polygon:[],
+    trapezoid:[],
+    endPoint:{
+        type:'rectangle',
+        position:{
+            x:720,
+            y:50,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    frame:{
+        up:false,
+        down:false,
+        left:false,
+        right:false,
+    },
+};
+
+Level.level5={
+    
+}

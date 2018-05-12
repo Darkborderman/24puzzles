@@ -33,7 +33,7 @@ let Config={
     },
     mouse:{
         setting:{
-            stiffness: 1,
+            stiffness: 0.1,
             render: {
                 visible: false
             }
