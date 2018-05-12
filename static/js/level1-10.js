@@ -365,5 +365,50 @@ Level.level4={
 };
 
 Level.level5={
-    
+    player:{
+        type:'rectangle',
+        position:{
+            x:200,
+            y:100,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    rectangle:[
+        {
+            position:{
+                x:100,
+                y:250,
+            },
+            size:{
+                width:120,
+                height:20,
+            },
+            option:{
+                render:Config.body.dynamic.render,
+            },
+        },
+    ],
+    circle:[],
+    polygon:[],
+    trapezoid:[],
+    endPoint:{
+        type:'rectangle',
+        position:{
+            x:720,
+            y:550,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    frame:{
+        up:true,
+        down:true,
+        left:true,
+        right:true,
+    },
 }

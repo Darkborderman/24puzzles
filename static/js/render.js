@@ -13,7 +13,6 @@ function worldRender(){
         constraint: Config.mouse.setting,
     });
     World.add(world, mouseConstraint);
-
 }
 
 //Generage world level
@@ -113,4 +112,8 @@ function levelGenerate(currentLevel){
         );
         World.add(world,triChild);
     }
+    //TODO
+    //create world's constraint by world.bodies
+    //console.log(world.bodies);
+    //Set different method for player and endpoint generate
 }
