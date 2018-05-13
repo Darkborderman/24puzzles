@@ -151,7 +151,7 @@ Level.level2={
         type:'rectangle',
         position:{
             x:720,
-            y:250,
+            y:550,
         },
         size:{
             width:40,
@@ -368,7 +368,121 @@ Level.level5={
     player:{
         type:'rectangle',
         position:{
-            x:200,
+            x:750,
+            y:300,
+        },
+        size:{
+            width:30,
+            height:30,
+        },
+    },
+    rectangle:[
+        {
+            position:{
+                x:715,
+                y:400,
+            },
+            size:{
+                width:20,
+                height:400,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:750,
+                y:500,
+            },
+            size:{
+                width:40,
+                height:80,
+            },
+            option:{
+                density:5,
+                render:Config.body.dynamic.render,
+            },
+        },
+    ],
+    circle:[
+        {
+            position:{
+                x:300,
+                y:300,
+            },
+            radius:40,
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:30,
+                y:30,
+            },
+            radius:200,
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:500,
+                y:800,
+            },
+            radius:300,
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+    ],
+    polygon:[],
+    trapezoid:[
+        {
+            position:{
+                x:740,
+                y:110,
+            },
+            size:{
+                width:200,
+                height:200,
+            },
+            slope:5,
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+    ],
+    endPoint:{
+        type:'rectangle',
+        position:{
+            x:250,
+            y:550,
+        },
+        size:{
+            width:40,
+            height:40,
+        },
+    },
+    frame:{
+        up:true,
+        down:false,
+        left:false,
+        right:true,
+    },
+};
+
+Level.level6={
+    player:{
+        type:'rectangle',
+        position:{
+            x:100,
             y:100,
         },
         size:{
@@ -377,16 +491,131 @@ Level.level5={
         },
     },
     rectangle:[
+
         {
             position:{
-                x:100,
-                y:250,
+                x:170,
+                y:280,
             },
             size:{
-                width:120,
-                height:20,
+                width:10,
+                height:200,
             },
             option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:620,
+                y:280,
+            },
+            size:{
+                width:10,
+                height:200,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:620,
+                y:70,
+            },
+            size:{
+                width:10,
+                height:200,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:170,
+                y:70,
+            },
+            size:{
+                width:10,
+                height:200,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:170,
+                y:435,
+            },
+            size:{
+                width:10,
+                height:90,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:620,
+                y:435,
+            },
+            size:{
+                width:10,
+                height:90,
+            },
+            option:{
+                isStatic:true,
+                render:Config.body.static.render,
+            },
+        },
+        {
+            position:{
+                x:350,
+                y:180,
+            },
+            size:{
+                width:560,
+                height:10,
+            },
+            option:{
+                density:10,
+                render:Config.body.dynamic.render,
+            },
+        },
+        {
+            position:{
+                x:440,
+                y:380,
+            },
+            size:{
+                width:560,
+                height:10,
+            },
+            option:{
+                density:10,
+                render:Config.body.dynamic.render,
+            },
+        },
+        {
+            position:{
+                x:680,
+                y:350,
+            },
+            size:{
+                width:100,
+                height:10,
+            },
+            option:{
+                density:0.5,
+                frictionAir:0.9,
                 render:Config.body.dynamic.render,
             },
         },
@@ -397,8 +626,8 @@ Level.level5={
     endPoint:{
         type:'rectangle',
         position:{
-            x:720,
-            y:550,
+            x:700,
+            y:100,
         },
         size:{
             width:40,
@@ -407,8 +636,8 @@ Level.level5={
     },
     frame:{
         up:true,
-        down:true,
+        down:false,
         left:true,
         right:true,
     },
-}
+};
