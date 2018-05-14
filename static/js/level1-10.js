@@ -1,3 +1,22 @@
+/*
+    rectangle:{
+        position:{
+            x:int,
+            y:int,
+        },
+        size:{
+            width:int,
+            height:int,
+        },
+        options:{
+            isStatic:bool,
+            isSensor:bool,
+            render:object,
+        }
+
+    }
+*/
+
 let Level={};
 
 Level.level1={
@@ -22,7 +41,7 @@ Level.level1={
                 width:120,
                 height:20,
             },
-            option:{
+            options:{
                 render:Config.body.dynamic.render,
             },
         },
@@ -71,7 +90,7 @@ Level.level2={
                 width:700,
                 height:20,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -85,7 +104,7 @@ Level.level2={
                 width:700,
                 height:20,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -99,7 +118,7 @@ Level.level2={
                 width:40,
                 height:40,
             },
-            option:{
+            options:{
                 render:Config.body.dynamic.render,
             },
         },
@@ -111,7 +130,7 @@ Level.level2={
                 y:456,
             },
             radius:20,
-            option:{
+            options:{
                 render:Config.body.dynamic.render,
             },
         },
@@ -125,7 +144,7 @@ Level.level2={
             },
             sides:5,
             radius:20,
-            option:{
+            options:{
                 render:Config.body.dynamic.render,
             },
         },
@@ -141,7 +160,7 @@ Level.level2={
                 height:200,
             },
             slope:2,
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -188,7 +207,7 @@ Level.level3={
                 width:500,
                 height:10,
             },
-            option:{
+            options:{
                 render:Config.body.dynamic.render,
             },
         },
@@ -201,7 +220,7 @@ Level.level3={
                 width:10,
                 height:30,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -214,7 +233,7 @@ Level.level3={
                 y:456,
             },
             radius:50,
-            option:{
+            options:{
                 density:0.1,
                 render:Config.body.dynamic.render,
             },
@@ -232,7 +251,7 @@ Level.level3={
                 height:100,
             },
             slope:1,
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -279,7 +298,7 @@ Level.level4={
                 width:120,
                 height:10,
             },
-            option:{
+            options:{
                 frictionAir: 0.5,
                 density:10,
                 render:Config.body.dynamic.render,
@@ -294,7 +313,7 @@ Level.level4={
                 width:160,
                 height:10,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -308,7 +327,7 @@ Level.level4={
                 width:650,
                 height:10,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -322,7 +341,7 @@ Level.level4={
                 width:650,
                 height:10,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -336,7 +355,7 @@ Level.level4={
                 width:10,
                 height:50,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -386,7 +405,7 @@ Level.level5={
                 width:20,
                 height:400,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -400,7 +419,7 @@ Level.level5={
                 width:40,
                 height:80,
             },
-            option:{
+            options:{
                 density:5,
                 render:Config.body.dynamic.render,
             },
@@ -413,7 +432,7 @@ Level.level5={
                 y:300,
             },
             radius:40,
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -424,7 +443,7 @@ Level.level5={
                 y:30,
             },
             radius:200,
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -435,7 +454,7 @@ Level.level5={
                 y:800,
             },
             radius:300,
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -453,7 +472,7 @@ Level.level5={
                 height:200,
             },
             slope:5,
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -501,7 +520,7 @@ Level.level6={
                 width:10,
                 height:200,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -515,7 +534,7 @@ Level.level6={
                 width:10,
                 height:200,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -529,7 +548,7 @@ Level.level6={
                 width:10,
                 height:200,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -543,7 +562,7 @@ Level.level6={
                 width:10,
                 height:200,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -557,7 +576,7 @@ Level.level6={
                 width:10,
                 height:90,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -571,7 +590,7 @@ Level.level6={
                 width:10,
                 height:90,
             },
-            option:{
+            options:{
                 isStatic:true,
                 render:Config.body.static.render,
             },
@@ -585,7 +604,7 @@ Level.level6={
                 width:560,
                 height:10,
             },
-            option:{
+            options:{
                 density:10,
                 render:Config.body.dynamic.render,
             },
@@ -599,7 +618,7 @@ Level.level6={
                 width:560,
                 height:10,
             },
-            option:{
+            options:{
                 density:10,
                 render:Config.body.dynamic.render,
             },
@@ -613,7 +632,7 @@ Level.level6={
                 width:100,
                 height:10,
             },
-            option:{
+            options:{
                 density:0.5,
                 frictionAir:0.9,
                 render:Config.body.dynamic.render,

@@ -3,7 +3,7 @@ function worldRender(){
     render = Render.create({
         element: Config.render.element,
         engine: engine,
-        options: Config.render.option,
+        options: Config.render.options,
     });
     Render.run(render);
 }
@@ -28,7 +28,7 @@ function levelGenerate(currentLevel){
             rectData[i].position.y,
             rectData[i].size.width,
             rectData[i].size.height,
-            rectData[i].option
+            rectData[i].options
         );
         World.add(world,rectChild);
     }
@@ -40,7 +40,7 @@ function levelGenerate(currentLevel){
             cirData[i].position.x,
             cirData[i].position.y,
             cirData[i].radius,
-            cirData[i].option
+            cirData[i].options
         );
         World.add(world,cirChild);
     }
@@ -53,7 +53,7 @@ function levelGenerate(currentLevel){
             polyData[i].position.y,
             polyData[i].sides,
             polyData[i].radius,
-            polyData[i].option
+            polyData[i].options
         );
         World.add(world,polyChild);
     }
@@ -67,7 +67,7 @@ function levelGenerate(currentLevel){
             triData[i].size.width,
             triData[i].size.height,
             triData[i].slope,
-            triData[i].option
+            triData[i].options
         );
         World.add(world,triChild);
     }
@@ -84,7 +84,7 @@ function levelGenerate(currentLevel){
             width:x,
             heightx,
         }
-        option:{
+        options:{
             isStatic:true,
             render:Config.body.static.render, <-maybe use if to select render
         }
@@ -107,28 +107,28 @@ function frameGenerage(currentLevel)
             0,
             Config.canvas.width+Config.frame.offset,
             Config.frame.thickness,
-            Config.frame.setting),
+            Config.frame.options),
         down:Bodies.rectangle(
             Config.canvas.width/2,
             Config.canvas.height,
             Config.canvas.width+Config.frame.offset,
             Config.frame.thickness,
-            Config.frame.setting),
+            Config.frame.options),
         left:Bodies.rectangle(
             0,
             Config.canvas.height/2,
             Config.frame.thickness,
             Config.canvas.height+Config.frame.offset,
-            Config.frame.setting),
+            Config.frame.options),
         right:Bodies.rectangle(
             Config.canvas.width,
             Config.canvas.height/2,
             Config.frame.thickness,
             Config.canvas.height+Config.frame.offset,
-            Config.frame.setting),
+            Config.frame.options),
     };
 
-    //add frame to the world according to the setting
+    //add frame to the world according to the options
     let frameData=currentLevel.frame;
     for(frameDirection in frameData)
     {
@@ -145,14 +145,14 @@ function playerGenerate(currentLevel)
             currentLevel.player.position.y,
             currentLevel.player.size.width,
             currentLevel.player.size.height,
-            Config.player.setting);
+            Config.player.options);
     }
     if(currentLevel.player.type==='circle'){
         player=Bodies.circle(
             currentLevel.player.position.x,
             currentLevel.player.position.y,
             currentLevel.player.radius,
-            Config.player.setting);
+            Config.player.options);
     }
     if(currentLevel.player.type==='polygon'){
         player=Bodies.polygon(
@@ -160,7 +160,7 @@ function playerGenerate(currentLevel)
             currentLevel.player.position.y,
             currentLevel.player.sides,
             currentLevel.player.radius,
-            Config.player.setting);
+            Config.player.options);
     }
     if(currentLevel.player.type==='trapezoid')
     {
@@ -170,7 +170,7 @@ function playerGenerate(currentLevel)
             currentLevel.player.size.width,
             currentLevel.player.size.height,
             currentLevel.player.slope,
-            Config.player.setting);
+            Config.player.options);
     }
 
     World.add(world,player);
@@ -185,14 +185,14 @@ function endPointGenerate(currentLevel)
             currentLevel.endPoint.position.y,
             currentLevel.endPoint.size.width,
             currentLevel.endPoint.size.height,
-            Config.endPoint.setting);
+            Config.endPoint.options);
     }
     if(currentLevel.endPoint.type==='circle'){
         endPoint=Bodies.circle(
             currentLevel.endPoint.position.x,
             currentLevel.endPoint.position.y,
             currentLevel.endPoint.radius,
-            Config.endPoint.setting);
+            Config.endPoint.options);
     }
     if(currentLevel.endPoint.type==='polygon'){
         endPoint=Bodies.polygon(
@@ -200,7 +200,7 @@ function endPointGenerate(currentLevel)
             currentLevel.endPoint.position.y,
             currentLevel.endPoint.sides,
             currentLevel.endPoint.radius,
-            Config.endPoint.setting);
+            Config.endPoint.options);
     }
     if(currentLevel.endPoint.type==='trapezoid'){
         endPoint=Bodies.trapezoid(
@@ -209,7 +209,7 @@ function endPointGenerate(currentLevel)
             currentLevel.endPoint.size.width,
             currentLevel.endPoint.size.height,
             currentLevel.endPoint.slope,
-            Config.endPoint.setting);
+            Config.endPoint.options);
     }
 
     World.add(world,endPoint);
@@ -221,7 +221,7 @@ function mouseGenerate(render){
     let mouse = Mouse.create(render.canvas);
     mouseConstraint = MouseConstraint.create(engine, {
         mouse: mouse,
-        constraint: Config.mouse.setting,
+        constraint: Config.mouse.options,
     });
     World.add(world, mouseConstraint);
     return mouseConstraint;

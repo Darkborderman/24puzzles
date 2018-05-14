@@ -11,7 +11,7 @@ let Config={
         },
     },
     render:{
-        option:{
+        options:{
             width: 800,
             height: 600,
             showAngleIndicator: false, //show each item's angle
@@ -24,7 +24,7 @@ let Config={
     frame:{
         offset:10,
         thickness:60,
-        setting:{
+        options:{
             isStatic: true,
             render:{
                 strokeStyle: 'Dimgray',
@@ -34,7 +34,7 @@ let Config={
         },
     },
     mouse:{
-        setting:{
+        options:{
             stiffness: 0.1,
             render: {
                 visible: false
@@ -43,7 +43,7 @@ let Config={
     },
     level:'level1',
     player:{
-        setting:{
+        options:{
             render: {
                 strokeStyle: 'yellow',
                 fillStyle: 'transparent',
@@ -53,7 +53,7 @@ let Config={
         },
     },
     endPoint:{
-        setting:{
+        options:{
             isSensor:true,
             isStatic:true,
             render: {

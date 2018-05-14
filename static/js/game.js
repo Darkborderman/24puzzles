@@ -63,7 +63,7 @@ function gameStart() {
 
     //Player can drag any non-static object except main character
     //TODO <- detect object movable by additional properties
-    //may change arch to body.setting.canDrag=true/false
+    //may change arch to body.options.canDrag=true/false
     Events.on(mouseConstraint, 'startdrag', function(event){
         if(event.body.label=='player'){
             event.body.isStatic=true;
