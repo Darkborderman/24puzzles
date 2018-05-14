@@ -79,5 +79,19 @@ let Config={
                 lineWidth: 2,
             },
         },
+        undrag:{
+            render: {
+                strokeStyle:'Blue',
+                fillStyle: 'transparent',
+                lineWidth:2,
+            },
+        },
+        damage:{
+            render:{
+                strokeStyle:'Purple',
+                fillStyle: 'transparent',
+                lineWidth:2,
+            },
+        },
     },
 };

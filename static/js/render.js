@@ -226,3 +226,27 @@ function mouseGenerate(render){
     World.add(world, mouseConstraint);
     return mouseConstraint;
 }
+
+//assign option for body setup
+function setOptions(bodyData)
+{
+    let options={}
+    if(bodyData.setup.isStatic==true)
+    {
+        options.isStatic=true;
+        options.render=Config.body.static.render;
+    }
+    else if(bodyData.setup.canDrag==false)
+    {
+        options.render=Config.body.undrag.render;
+    }
+    else if(bodyData.setup.canDamage==true)
+    {
+        options.render=Config.body.damage.render;
+    }
+    else
+    {
+        options.render=Config.body.dynamic.render;
+    }
+    return options;
+}

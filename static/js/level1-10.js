@@ -7,13 +7,14 @@
         size:{
             width:int,
             height:int,
-        },
-        options:{
-            isStatic:bool,
-            isSensor:bool,
-            render:object,
         }
-
+        setup:{
+            isStatic:bool,
+            //isSensor does not need, only endPoint need it
+            canDrag:bool
+            canDamage:bool
+            canBuild:bool
+        }
     }
 */
 
