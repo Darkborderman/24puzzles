@@ -22,6 +22,8 @@ let Config={
         element:document.getElementById('game'),  
     },
     frame:{
+        offset:10,
+        thickness:60,
         setting:{
             isStatic: true,
             render:{
