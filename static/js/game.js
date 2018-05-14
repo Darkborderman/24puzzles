@@ -30,6 +30,12 @@ function gameStart() {
     //Detect the world has been generated or not
     if(render!=null) return;
 
+    let Time={
+        startDate:new Date(),
+        endDate:null,
+        isFinish:false,
+    };
+
     worldRender();
 
     let currentLevel=Level[Config.level];
@@ -42,23 +48,29 @@ function gameStart() {
         for (let i = 0, j = pairs.length; i != j; ++i) {
             let pair = pairs[i];
             if (pair.bodyA === endPoint&&pair.bodyB===player) {
+                let endDate   = new Date();
                 pair.bodyA.render.strokeStyle = 'white';
                 audio.play();
-            } else if (pair.bodyB === endPoint&&pair.bodyA===player) {
+                gameFinish(Time);
+                
+            }
+            else if (pair.bodyB === endPoint&&pair.bodyA===player) {
+                let endDate   = new Date();
                 pair.bodyB.render.strokeStyle = 'white';
                 audio.play();
+                gameFinish(Time);
             }
         }
     });
 
     //Player can drag any non-static object except main character
-    Events.on(mouseConstraint, "startdrag", function(event){
-        if(event.body.label=="player"){
+    Events.on(mouseConstraint, 'startdrag', function(event){
+        if(event.body.label=='player'){
             event.body.isStatic=true;
         }
     });
-    Events.on(mouseConstraint, "enddrag", function(event){
-        if(event.body.label=="player"){
+    Events.on(mouseConstraint, 'enddrag', function(event){
+        if(event.body.label=='player'){
             event.body.isStatic=false;
         }
     });
@@ -78,18 +90,28 @@ function gameReset(){
     gameStart();
 }
 
+function gameFinish(Time){
+    Time.endDate=new Date();
+    if(!Time.isFinish)
+    {
+        let elapsedTime=(Time.endDate.getTime() - Time.startDate.getTime()) / 1000;
+        document.getElementById('time').innerHTML='Spent time: '+elapsedTime+' seconds';
+        Time.isFinish=true;
+    } 
+}
+
 //Use event listener to replace inline HTML
 document.addEventListener('DOMContentLoaded',function(){
-    document.getElementById('start').addEventListener('click',function(){
-        gameStart();
-    });
     document.getElementById('reset').addEventListener('click',function(){
+        document.getElementById('time').innerHTML='Spent time';
         gameReset();
     });
-    Config.level = document.getElementById("selection").value;
+    document.getElementById('time').innerHTML='Spent time';
+    Config.level = document.getElementById('selection').value;
     gameStart();
 });
 document.getElementById('selection').addEventListener('change',function(){
-    Config.level = document.getElementById("selection").value;
+    Config.level = document.getElementById('selection').value;
+    document.getElementById('time').innerHTML='Spent time';
     gameReset();
 });

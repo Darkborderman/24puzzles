@@ -1,24 +1,27 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <title>24 Puzzles</title>
     </head>
     <body>
         <div id="game"></div>
-        <button id="start">start</button>
-        <button id="reset">Reset</button>
-        <select id="selection">
-            <option>level1</option>
-            <option>level2</option>
-            <option>level3</option>
-            <option>level4</option>
-            <option>level5</option>
-            <option>level6</option>
-        </select>
+        <section>
+            <button id="reset">Reset</button>
+            <select id="selection">
+                <option>level1</option>
+                <option>level2</option>
+                <option>level3</option>
+                <option>level4</option>
+                <option>level5</option>
+                <option>level6</option>
+            </select>
+            <span id="time">Spent time</span>
+        </section>
     </body>
     <script src="node_modules/matter-js/build/matter.js"></script>
     <script src="static/js/config.js"></script>
     <script src="static/js/render.js"></script>
     <script src="static/js/level1-10.js"></script>
     <script src="static/js/game.js"></script>
-    <link rel="stylesheet" type="text/css" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/style.css">
 </html>
