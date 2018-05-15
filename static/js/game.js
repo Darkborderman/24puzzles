@@ -50,6 +50,14 @@ function gameStart() {
 
         for (let i=0, j=pairs.length;i!=j;++i){
             let pair = pairs[i];
+            
+            if(pair.bodyA.canDamage==true){
+                Composite.remove(world, pair.bodyB)
+            }
+            else if(pair.bodyB.canDamage==true){
+                Composite.remove(world, pair.bodyA)
+            }
+
             if (pair.bodyA === endPoint&&pair.bodyB===player) {
                 pair.bodyA.render.strokeStyle = 'white';
                 gameFinish(Time);

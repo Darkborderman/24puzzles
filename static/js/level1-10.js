@@ -255,11 +255,10 @@ Level.level4={
 
 Level.level5={
     player:{
-        type:'rectangle',
+        type:'circle',
         x:750,
         y:300,
-        width:30,
-        height:30,
+        radius:20,
     },
     rectangle:[
         {
@@ -440,6 +439,152 @@ Level.level6={
     frame:{
         up:true,
         down:false,
+        left:true,
+        right:true,
+    },
+};
+
+Level.level7={
+    player:{
+        type:'rectangle',
+        x:400,
+        y:50,
+        width:40,
+        height:40,
+    },
+    rectangle:[
+        {
+            x:280,
+            y:400,
+            width:100,
+            height:20,
+            options:{
+                density:5,
+            },
+        },
+        {
+            x:400,
+            y:370,
+            width:100,
+            height:65,
+            options:{
+                canUndrag:true,
+            },
+        },
+        {
+            x:400,
+            y:405,
+            width:100,
+            height:30,
+            options:{
+                canUndrag:true,
+            },
+        },
+        {
+            x:400,
+            y:420,
+            width:100,
+            height:30,
+            options:{
+                canUndrag:true,
+            },
+        },
+        {
+            x:400,
+            y:435,
+            width:100,
+            height:30,
+            options:{
+                canUndrag:true,
+            },
+        },
+        {
+            x:400,
+            y:450,
+            width:100,
+            height:30,
+            options:{
+                canUndrag:true,
+            },
+        },
+        {
+            x:400,
+            y:465,
+            width:100,
+            height:30,
+            options:{
+                canUndrag:true,
+            },
+        },
+        {
+            x:400,
+            y:480,
+            width:100,
+            height:30,
+            options:{
+                canUndrag:true,
+            },
+        },
+        {
+            x:350,
+            y:500,
+            width:250,
+            height:20,
+            options:{
+                isStatic:true,
+            },
+        },
+    ],
+    circle:[],
+    polygon:[],
+    trapezoid:[],
+    endPoint:{
+        type:'rectangle',
+        x:400,
+        y:450,
+        width:40,
+        height:40,
+    },
+    frame:{
+        up:true,
+        down:false,
+        left:true,
+        right:true,
+    },
+};
+
+Level.level8={
+    player:{
+        type:'rectangle',
+        x:200,
+        y:100,
+        width:40,
+        height:40,
+    },
+    rectangle:[
+        {
+            x:100,
+            y:250,
+            width:120,
+            height:20,
+            options:{
+                canDamage:true,
+            },
+        },
+    ],
+    circle:[],
+    polygon:[],
+    trapezoid:[],
+    endPoint:{
+        type:'rectangle',
+        x:720,
+        y:550,
+        width:40,
+        height:40,
+    },
+    frame:{
+        up:true,
+        down:true,
         left:true,
         right:true,
     },

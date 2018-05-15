@@ -210,18 +210,17 @@ function mouseGenerate(render){
 //assign option for body setup
 function setBodyRender(bodyData)
 {
-    console.log(bodyData);
-    if(bodyData.options.isStatic==true)
+    if(bodyData.options.canDamage==true)
     {
-        bodyData.options.render=Config.body.static.render;
+        bodyData.options.render=Config.body.damage.render;
     }
     else if(bodyData.options.canUndrag==true)
     {
         bodyData.options.render=Config.body.undrag.render;
     }
-    else if(bodyData.options.canDamage==true)
+    else if(bodyData.options.isStatic==true)
     {
-        bodyData.options.render=Config.body.damage.render;
+        bodyData.options.render=Config.body.static.render;
     }
     else
     {
