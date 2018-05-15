@@ -24,10 +24,10 @@ function levelGenerate(currentLevel){
     for(i in rectData)
     {
         let rectChild= Bodies.rectangle(
-            rectData[i].position.x,
-            rectData[i].position.y,
-            rectData[i].size.width,
-            rectData[i].size.height,
+            rectData[i].x,
+            rectData[i].y,
+            rectData[i].width,
+            rectData[i].height,
             setBodyRender(rectData[i])
         );
         World.add(world,rectChild);
@@ -37,8 +37,8 @@ function levelGenerate(currentLevel){
     for(i in cirData)
     {
         let cirChild=Bodies.circle(
-            cirData[i].position.x,
-            cirData[i].position.y,
+            cirData[i].x,
+            cirData[i].y,
             cirData[i].radius,
             setBodyRender(cirData[i])
         );
@@ -49,8 +49,8 @@ function levelGenerate(currentLevel){
     for(i in polyData)
     {
         let polyChild=Bodies.polygon(
-            polyData[i].position.x,
-            polyData[i].position.y,
+            polyData[i].x,
+            polyData[i].y,
             polyData[i].sides,
             polyData[i].radius,
             setBodyRender(polyData[i])
@@ -62,10 +62,10 @@ function levelGenerate(currentLevel){
     for(i in triData)
     {
         let triChild=Bodies.trapezoid(
-            triData[i].position.x,
-            triData[i].position.y,
-            triData[i].size.width,
-            triData[i].size.height,
+            triData[i].x,
+            triData[i].y,
+            triData[i].width,
+            triData[i].height,
             triData[i].slope,
             setBodyRender(triData[i])
         );
@@ -121,23 +121,23 @@ function playerGenerate(currentLevel)
 {
     if(currentLevel.player.type==='rectangle'){
         player=Bodies.rectangle(
-            currentLevel.player.position.x,
-            currentLevel.player.position.y,
-            currentLevel.player.size.width,
-            currentLevel.player.size.height,
+            currentLevel.player.x,
+            currentLevel.player.y,
+            currentLevel.player.width,
+            currentLevel.player.height,
             Config.player.options);
     }
     if(currentLevel.player.type==='circle'){
         player=Bodies.circle(
-            currentLevel.player.position.x,
-            currentLevel.player.position.y,
+            currentLevel.player.x,
+            currentLevel.player.y,
             currentLevel.player.radius,
             Config.player.options);
     }
     if(currentLevel.player.type==='polygon'){
         player=Bodies.polygon(
-            currentLevel.player.position.x,
-            currentLevel.player.position.y,
+            currentLevel.player.x,
+            currentLevel.player.y,
             currentLevel.player.sides,
             currentLevel.player.radius,
             Config.player.options);
@@ -145,10 +145,10 @@ function playerGenerate(currentLevel)
     if(currentLevel.player.type==='trapezoid')
     {
         player=Bodies.trapezoid(
-            currentLevel.player.position.x,
-            currentLevel.player.position.y,
-            currentLevel.player.size.width,
-            currentLevel.player.size.height,
+            currentLevel.player.x,
+            currentLevel.player.y,
+            currentLevel.player.width,
+            currentLevel.player.height,
             currentLevel.player.slope,
             Config.player.options);
     }
@@ -161,33 +161,33 @@ function endPointGenerate(currentLevel)
 {
     if(currentLevel.endPoint.type==='rectangle'){
         endPoint=Bodies.rectangle(
-            currentLevel.endPoint.position.x,
-            currentLevel.endPoint.position.y,
-            currentLevel.endPoint.size.width,
-            currentLevel.endPoint.size.height,
+            currentLevel.endPoint.x,
+            currentLevel.endPoint.y,
+            currentLevel.endPoint.width,
+            currentLevel.endPoint.height,
             Config.endPoint.options);
     }
     if(currentLevel.endPoint.type==='circle'){
         endPoint=Bodies.circle(
-            currentLevel.endPoint.position.x,
-            currentLevel.endPoint.position.y,
+            currentLevel.endPoint.x,
+            currentLevel.endPoint.y,
             currentLevel.endPoint.radius,
             Config.endPoint.options);
     }
     if(currentLevel.endPoint.type==='polygon'){
         endPoint=Bodies.polygon(
-            currentLevel.endPoint.position.x,
-            currentLevel.endPoint.position.y,
+            currentLevel.endPoint.x,
+            currentLevel.endPoint.y,
             currentLevel.endPoint.sides,
             currentLevel.endPoint.radius,
             Config.endPoint.options);
     }
     if(currentLevel.endPoint.type==='trapezoid'){
         endPoint=Bodies.trapezoid(
-            currentLevel.endPoint.position.x,
-            currentLevel.endPoint.position.y,
-            currentLevel.endPoint.size.width,
-            currentLevel.endPoint.size.height,
+            currentLevel.endPoint.x,
+            currentLevel.endPoint.y,
+            currentLevel.endPoint.width,
+            currentLevel.endPoint.height,
             currentLevel.endPoint.slope,
             Config.endPoint.options);
     }

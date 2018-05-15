@@ -3,25 +3,17 @@ let Level={};
 Level.level1={
     player:{
         type:'rectangle',
-        position:{
-            x:200,
-            y:100,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:200,
+        y:100,
+        width:40,
+        height:40,
     },
     rectangle:[
         {
-            position:{
-                x:100,
-                y:250,
-            },
-            size:{
-                width:120,
-                height:20,
-            },
+            x:100,
+            y:250,
+            width:120,
+            height:20,
             options:{},
         },
     ],
@@ -30,14 +22,10 @@ Level.level1={
     trapezoid:[],
     endPoint:{
         type:'rectangle',
-        position:{
-            x:720,
-            y:550,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:720,
+        y:550,
+        width:40,
+        height:40,
     },
     frame:{
         up:true,
@@ -50,61 +38,42 @@ Level.level1={
 Level.level2={
     player:{
         type:'rectangle',
-        position:{
             x:150,
             y:50,
-        },
-        size:{
             width:40,
             height:40,
-        },
     },
     rectangle:[
         {
-            position:{
-                x:350,
-                y:100,
-            },
-            size:{
-                width:700,
-                height:20,
-            },
+            x:350,
+            y:100,
+            width:700,
+            height:20,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:500,
-                y:200,
-            },
-            size:{
-                width:700,
-                height:20,
-            },
+            x:500,
+            y:200,
+            width:700,
+            height:20,
             options:{
                 isStatic:true,
             },
-
         },
         {
-            position:{
-                x:100,
-                y:50,
-            },
-            size:{
-                width:40,
-                height:40,
-            },
+            x:100,
+            y:50,
+            width:40,
+            height:40,
             options:{},
         },
     ],
     circle:[
         {
-            position:{
-                x:123,
-                y:456,
-            },
+            x:123,
+            y:456,
             radius:20,
             options:{},
         },
@@ -112,10 +81,8 @@ Level.level2={
 
     polygon:[
         {
-            position:{
-                x:123,
-                y:456,
-            },
+            x:123,
+            y:456,
             sides:5,
             radius:20,
             options:{},
@@ -123,14 +90,10 @@ Level.level2={
     ],
     trapezoid:[
         {
-            position:{
-                x:100,
-                y:510,
-            },
-            size:{
-                width:200,
-                height:200,
-            },
+            x:100,
+            y:510,
+            width:200,
+            height:200,
             slope:2,
             options:{
                 isStatic:true,
@@ -139,14 +102,10 @@ Level.level2={
     ],
     endPoint:{
         type:'rectangle',
-        position:{
-            x:720,
-            y:550,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:720,
+        y:550,
+        width:40,
+        height:40,
     },
     frame:{
         up:true,
@@ -159,36 +118,24 @@ Level.level2={
 Level.level3={
     player:{
         type:'rectangle',
-        position:{
-            x:500,
-            y:100,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:500,
+        y:100,
+        width:40,
+        height:40,
     },
     rectangle:[
         {
-            position:{
-                x:500,
-                y:250,
-            },
-            size:{
-                width:500,
-                height:10,
-            },
+            x:500,
+            y:250,
+            width:500,
+            height:10,
             options:{},
         },
         {
-            position:{
-                x:700,
-                y:550,
-            },
-            size:{
-                width:10,
-                height:30,
-            },
+            x:700,
+            y:550,
+            width:10,
+            height:30,
             options:{
                 isStatic:true,
             },
@@ -196,10 +143,8 @@ Level.level3={
     ],
     circle:[
         {
-            position:{
-                x:123,
-                y:456,
-            },
+            x:123,
+            y:456,
             radius:50,
             options:{
                 density:0.1,
@@ -209,14 +154,10 @@ Level.level3={
     polygon:[],
     trapezoid:[
         {
-            position:{
-                x:400,
-                y:540,
-            },
-            size:{
-                width:300,
-                height:100,
-            },
+            x:400,
+            y:540,
+            width:300,
+            height:100,
             slope:1,
             options:{
                 isStatic:true,
@@ -225,14 +166,10 @@ Level.level3={
     ],
     endPoint:{
         type:'rectangle',
-        position:{
-            x:100,
-            y:100,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:100,
+        y:100,
+        width:40,
+        height:40,
     },
     frame:{
         up:true,
@@ -245,78 +182,54 @@ Level.level3={
 Level.level4={
     player:{
         type:'rectangle',
-        position:{
-            x:100,
-            y:450,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:100,
+        y:450,
+        width:40,
+        height:40,
     },
     rectangle:[
         {
-            position:{
-                x:100,
-                y:500,
-            },
-            size:{
-                width:120,
-                height:10,
-            },
+            x:100,
+            y:500,
+            width:120,
+            height:10,
             options:{
                 frictionAir: 0.5,
                 density:10,
             },
         },
         {
-            position:{
-                x:100,
-                y:550,
-            },
-            size:{
-                width:160,
-                height:10,
-            },
+            x:100,
+            y:550,
+            width:160,
+            height:10,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:360,
-                y:400,
-            },
-            size:{
-                width:650,
-                height:10,
-            },
+            x:360,
+            y:400,
+            width:650,
+            height:10,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:420,
-                y:200,
-            },
-            size:{
-                width:650,
-                height:10,
-            },
+            x:420,
+            y:200,
+            width:650,
+            height:10,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:20,
-                y:370,
-            },
-            size:{
-                width:10,
-                height:50,
-            },
+            x:20,
+            y:370,
+            width:10,
+            height:50,
             options:{
                 isStatic:true,
             },
@@ -327,14 +240,10 @@ Level.level4={
     trapezoid:[],
     endPoint:{
         type:'rectangle',
-        position:{
-            x:720,
-            y:50,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:720,
+        y:50,
+        width:40,
+        height:40,
     },
     frame:{
         up:false,
@@ -347,38 +256,26 @@ Level.level4={
 Level.level5={
     player:{
         type:'rectangle',
-        position:{
-            x:750,
-            y:300,
-        },
-        size:{
-            width:30,
-            height:30,
-        },
+        x:750,
+        y:300,
+        width:30,
+        height:30,
     },
     rectangle:[
         {
-            position:{
-                x:715,
-                y:400,
-            },
-            size:{
-                width:20,
-                height:400,
-            },
+            x:715,
+            y:400,
+            width:20,
+            height:400,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:750,
-                y:500,
-            },
-            size:{
-                width:40,
-                height:80,
-            },
+            x:750,
+            y:500,
+            width:40,
+            height:80,
             options:{
                 density:5,
             },
@@ -386,30 +283,24 @@ Level.level5={
     ],
     circle:[
         {
-            position:{
-                x:300,
-                y:300,
-            },
+            x:300,
+            y:300,
             radius:40,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:30,
-                y:30,
-            },
+            x:30,
+            y:30,
             radius:200,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:500,
-                y:800,
-            },
+            x:500,
+            y:800,
             radius:300,
             options:{
                 isStatic:true,
@@ -419,14 +310,10 @@ Level.level5={
     polygon:[],
     trapezoid:[
         {
-            position:{
-                x:740,
-                y:110,
-            },
-            size:{
-                width:200,
-                height:200,
-            },
+            x:740,
+            y:110,
+            width:200,
+            height:200,
             slope:5,
             options:{
                 isStatic:true,
@@ -435,14 +322,10 @@ Level.level5={
     ],
     endPoint:{
         type:'rectangle',
-        position:{
-            x:250,
-            y:550,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:250,
+        y:550,
+        width:40,
+        height:40,
     },
     frame:{
         up:true,
@@ -455,130 +338,89 @@ Level.level5={
 Level.level6={
     player:{
         type:'rectangle',
-        position:{
             x:100,
             y:100,
-        },
-        size:{
             width:40,
             height:40,
-        },
     },
     rectangle:[
-
         {
-            position:{
-                x:170,
-                y:280,
-            },
-            size:{
-                width:10,
-                height:200,
-            },
+            x:170,
+            y:280,
+            width:10,
+            height:200,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:620,
-                y:280,
-            },
-            size:{
-                width:10,
-                height:200,
-            },
+            x:620,
+            y:280,
+            width:10,
+            height:200,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:620,
-                y:70,
-            },
-            size:{
-                width:10,
-                height:200,
-            },
+            x:620,
+            y:70,
+            width:10,
+            height:200,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:170,
-                y:70,
-            },
-            size:{
-                width:10,
-                height:200,
-            },
+            x:170,
+            y:70,
+            width:10,
+            height:200,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:170,
-                y:435,
-            },
-            size:{
-                width:10,
-                height:90,
-            },
+            x:170,
+            y:435,
+            width:10,
+            height:90,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:620,
-                y:435,
-            },
-            size:{
-                width:10,
-                height:90,
-            },
+            x:620,
+            y:435,
+            width:10,
+            height:90,
             options:{
                 isStatic:true,
             },
         },
         {
-            position:{
-                x:350,
-                y:180,
-            },
-            size:{
-                width:560,
-                height:10,
-            },
+            x:350,
+            y:180,
+            width:560,
+            height:10,
             options:{
                 density:10,
             },
         },
         {
-            position:{
-                x:440,
-                y:380,
-            },
-            size:{
-                width:560,
-                height:10,
-            },
+            x:440,
+            y:380,
+            width:560,
+            height:10,
             options:{
                 density:10,
             },
         },
         {
-            position:{
-                x:680,
-                y:350,
-            },
-            size:{
-                width:100,
-                height:10,
-            },
+            x:680,
+            y:350,
+            width:100,
+            height:10,
             options:{
                 density:0.5,
                 frictionAir:0.9,
@@ -590,14 +432,10 @@ Level.level6={
     trapezoid:[],
     endPoint:{
         type:'rectangle',
-        position:{
-            x:700,
-            y:100,
-        },
-        size:{
-            width:40,
-            height:40,
-        },
+        x:700,
+        y:100,
+        width:40,
+        height:40,
     },
     frame:{
         up:true,
