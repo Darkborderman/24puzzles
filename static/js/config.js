@@ -44,12 +44,12 @@ let Config={
     level:'level1',
     player:{
         options:{
+            canUndrag:true,
             render: {
                 strokeStyle: 'yellow',
                 fillStyle: 'transparent',
                 lineWidth: 2,
             },
-            label:'player',
         },
     },
     endPoint:{
@@ -61,8 +61,7 @@ let Config={
                 fillStyle: 'transparent',
                 lineWidth: 2,
             },
-            label:'endPoint',
-        }
+        },
     },
     body:{
         dynamic:{

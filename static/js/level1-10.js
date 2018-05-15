@@ -1,23 +1,3 @@
-/*
-    rectangle:{
-        position:{
-            x:int,
-            y:int,
-        },
-        size:{
-            width:int,
-            height:int,
-        }
-        setup:{
-            isStatic:bool,
-            //isSensor does not need, only endPoint need it
-            canDrag:bool
-            canDamage:bool
-            canBuild:bool
-        }
-    }
-*/
-
 let Level={};
 
 Level.level1={
