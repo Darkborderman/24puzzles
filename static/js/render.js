@@ -28,7 +28,7 @@ function levelGenerate(currentLevel){
             rectData[i].position.y,
             rectData[i].size.width,
             rectData[i].size.height,
-            rectData[i].options
+            setBodyRender(rectData[i])
         );
         World.add(world,rectChild);
     }
@@ -40,7 +40,7 @@ function levelGenerate(currentLevel){
             cirData[i].position.x,
             cirData[i].position.y,
             cirData[i].radius,
-            cirData[i].options
+            setBodyRender(cirData[i])
         );
         World.add(world,cirChild);
     }
@@ -53,7 +53,7 @@ function levelGenerate(currentLevel){
             polyData[i].position.y,
             polyData[i].sides,
             polyData[i].radius,
-            polyData[i].options
+            setBodyRender(polyData[i])
         );
         World.add(world,polyChild);
     }
@@ -67,34 +67,14 @@ function levelGenerate(currentLevel){
             triData[i].size.width,
             triData[i].size.height,
             triData[i].slope,
-            triData[i].options
+            setBodyRender(triData[i])
         );
         World.add(world,triChild);
     }
 
-    //create other bodies
-
-    /*
-    rectangle={
-        position:{
-            x:x,
-            y:x
-        }
-        size:{
-            width:x,
-            heightx,
-        }
-        options:{
-            isStatic:true,
-            render:Config.body.static.render, <-maybe use if to select render
-        }
-    }
-    */
-
     //TODO
     //create world's constraint by world.bodies
     //console.log(world.bodies);
-    //Set different method for player and endpoint generate
 
 }
 
@@ -228,25 +208,24 @@ function mouseGenerate(render){
 }
 
 //assign option for body setup
-function setOptions(bodyData)
+function setBodyRender(bodyData)
 {
-    let options={}
-    if(bodyData.setup.isStatic==true)
+    console.log(bodyData);
+    if(bodyData.options.isStatic==true)
     {
-        options.isStatic=true;
-        options.render=Config.body.static.render;
+        bodyData.options.render=Config.body.static.render;
     }
-    else if(bodyData.setup.canDrag==false)
+    else if(bodyData.options.canUndrag==true)
     {
-        options.render=Config.body.undrag.render;
+        bodyData.options.render=Config.body.undrag.render;
     }
-    else if(bodyData.setup.canDamage==true)
+    else if(bodyData.options.canDamage==true)
     {
-        options.render=Config.body.damage.render;
+        bodyData.options.render=Config.body.damage.render;
     }
     else
     {
-        options.render=Config.body.dynamic.render;
+        bodyData.options.render=Config.body.dynamic.render;
     }
-    return options;
+    return bodyData.options;
 }

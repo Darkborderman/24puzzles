@@ -42,9 +42,7 @@ Level.level1={
                 width:120,
                 height:20,
             },
-            options:{
-                render:Config.body.dynamic.render,
-            },
+            options:{},
         },
     ],
     circle:[],
@@ -93,7 +91,6 @@ Level.level2={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -107,8 +104,8 @@ Level.level2={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
+
         },
         {
             position:{
@@ -119,9 +116,7 @@ Level.level2={
                 width:40,
                 height:40,
             },
-            options:{
-                render:Config.body.dynamic.render,
-            },
+            options:{},
         },
     ],
     circle:[
@@ -131,9 +126,7 @@ Level.level2={
                 y:456,
             },
             radius:20,
-            options:{
-                render:Config.body.dynamic.render,
-            },
+            options:{},
         },
     ],
 
@@ -145,9 +138,7 @@ Level.level2={
             },
             sides:5,
             radius:20,
-            options:{
-                render:Config.body.dynamic.render,
-            },
+            options:{},
         },
     ],
     trapezoid:[
@@ -163,7 +154,6 @@ Level.level2={
             slope:2,
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
     ],
@@ -208,9 +198,7 @@ Level.level3={
                 width:500,
                 height:10,
             },
-            options:{
-                render:Config.body.dynamic.render,
-            },
+            options:{},
         },
         {
             position:{
@@ -223,7 +211,6 @@ Level.level3={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
     ],
@@ -236,7 +223,6 @@ Level.level3={
             radius:50,
             options:{
                 density:0.1,
-                render:Config.body.dynamic.render,
             },
         },
     ],
@@ -254,7 +240,6 @@ Level.level3={
             slope:1,
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
     ],
@@ -302,7 +287,6 @@ Level.level4={
             options:{
                 frictionAir: 0.5,
                 density:10,
-                render:Config.body.dynamic.render,
             },
         },
         {
@@ -316,7 +300,6 @@ Level.level4={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -330,7 +313,6 @@ Level.level4={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -344,7 +326,6 @@ Level.level4={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -358,7 +339,6 @@ Level.level4={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
     ],
@@ -408,7 +388,6 @@ Level.level5={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -422,7 +401,6 @@ Level.level5={
             },
             options:{
                 density:5,
-                render:Config.body.dynamic.render,
             },
         },
     ],
@@ -435,7 +413,6 @@ Level.level5={
             radius:40,
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -446,7 +423,6 @@ Level.level5={
             radius:200,
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -457,7 +433,6 @@ Level.level5={
             radius:300,
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
     ],
@@ -475,7 +450,6 @@ Level.level5={
             slope:5,
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
     ],
@@ -523,7 +497,6 @@ Level.level6={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -537,7 +510,6 @@ Level.level6={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -551,7 +523,6 @@ Level.level6={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -565,7 +536,6 @@ Level.level6={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -579,7 +549,6 @@ Level.level6={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -593,7 +562,6 @@ Level.level6={
             },
             options:{
                 isStatic:true,
-                render:Config.body.static.render,
             },
         },
         {
@@ -607,7 +575,6 @@ Level.level6={
             },
             options:{
                 density:10,
-                render:Config.body.dynamic.render,
             },
         },
         {
@@ -621,7 +588,6 @@ Level.level6={
             },
             options:{
                 density:10,
-                render:Config.body.dynamic.render,
             },
         },
         {
@@ -636,7 +602,6 @@ Level.level6={
             options:{
                 density:0.5,
                 frictionAir:0.9,
-                render:Config.body.dynamic.render,
             },
         },
     ],
