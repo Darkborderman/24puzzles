@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded',function(){
         document.getElementById('time').innerHTML='Spent time';
         gameReset();
     });
-    document.getElementById('time').innerHTML='Spent time';
+    document.getElementById('time').innerHTML='Spent time: ';
     Config.level=document.getElementById('selection').value;
     gameStart();
 });
@@ -120,6 +120,6 @@ document.addEventListener('DOMContentLoaded',function(){
 //Reset game when changing the level
 document.getElementById('selection').addEventListener('change',function(){
     Config.level=document.getElementById('selection').value;
-    document.getElementById('time').innerHTML='Spent time';
+    document.getElementById('time').innerHTML='Spent time: ';
     gameReset();
 });

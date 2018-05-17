@@ -129,7 +129,9 @@ Level.level3={
             y:250,
             width:500,
             height:10,
-            options:{},
+            options:{
+                canUndrag:true,
+            },
         },
         {
             x:700,
@@ -563,22 +565,73 @@ Level.level8={
     },
     rectangle:[
         {
-            x:100,
-            y:250,
-            width:120,
-            height:20,
+            x:290,
+            y:50,
+            width:450,
+            height:10,
             options:{
+                isStatic:true,
+                canDamage:true,
+            },
+        },
+        {
+            x:370,
+            y:550,
+            width:220,
+            height:10,
+            options:{
+                isStatic:true,
+                canDamage:true,
+            },
+        },
+        {
+            x:370,
+            y:480,
+            width:10,
+            height:100,
+            options:{
+                isStatic:true,
                 canDamage:true,
             },
         },
     ],
     circle:[],
     polygon:[],
-    trapezoid:[],
+    trapezoid:[
+        {
+            x:100,
+            y:510,
+            width:200,
+            height:200,
+            slope:2,
+            options:{
+            },
+        },
+        {
+            x:600,
+            y:480,
+            width:200,
+            height:200,
+            slope:1/2,
+            options:{
+                isStatic:true,
+            },
+        },
+        {
+            x:600,
+            y:120,
+            width:100,
+            height:200,
+            slope:-1/2,
+            options:{
+                isStatic:true,
+            },
+        },
+    ],
     endPoint:{
         type:'rectangle',
-        x:720,
-        y:550,
+        x:740,
+        y:500,
         width:40,
         height:40,
     },

@@ -10,9 +10,9 @@ A physics game using matter-js and basic HTML DOM
 
 「如果做個遊戲，把方塊用任意方式運到另一個點，感覺蠻有趣的」
 
-就這樣，找了一套JS的物理引擎，加上賣肝的8小時左右,24puzzles就出來了
+就這樣，找了一套JS的物理引擎，加上賣肝的一個下午,24puzzles就出來了
 
-##遊玩
+## 遊玩
 
 把玩家運到目標點,不計任何方式
 
